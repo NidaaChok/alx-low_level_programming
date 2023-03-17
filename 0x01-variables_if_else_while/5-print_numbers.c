@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+/**
+ *main - prints all single digit numbers starting from 0
+ *Description: using the main function
+ *this program prints the single digit numbers
+ *Return: 0
+ */
+
+int main(void)
+{
+	int n;
+
+	for (n = 0; n < 10; n++)
+		printf("%d", n);
+	printf("\n");
+	return (0);
+}
