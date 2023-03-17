@@ -9,11 +9,10 @@
 
 int main(void)
 {
-	int a;
+	int a = 97;
 
-	for (a = 97; a < 123; a++)
+	for (; a < 123; a++)
 		putchar(a);
-		putchar(10);
-
+	putchar('\n');
 	return (0);
 }
