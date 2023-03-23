@@ -1,32 +1,25 @@
 #include <stdio.h>
-
 /**
- *main - entry point
- *
- *Description:  a program that finds and prints the sum of the even-valued
- *
- *Return: Always 0 (success)
-*/
-
+  * main - Entry point
+  *Description:sum even fibonacci numbers under 4 million
+  *Return: always 0 (success)
+  */
 int main(void)
 {
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	float total_sum;
+	unsigned long count, i, j, k, sums;
 
-	while (1)
+	i = sums = 0;
+	j = 1;
+	for (count = 0; count < 50; count++)
 	{
-		sum = fib1 + fib2;
-
-		if (sum == 4000000)
-			break;
-		if ((sum % 2) == 0)
-			total_sum += sum;
-
-		fib1 = fib2;
-		fib2 = sum;
+		k = i + j;
+		i = j;
+		j = k;
+		if (k % 2 == 0 && k < 4000000)
+		{
+			sums += k;
+		}
 	}
-
-	printf("%.0f\n", total_sum);
-
+	printf("%lu\n", sums);
 	return (0);
 }
